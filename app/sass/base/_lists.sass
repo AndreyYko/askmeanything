@@ -1,0 +1,28 @@
+.nav-menu
+	display: flex
+	font-size: 3.5em
+	margin-top: 50px
+	li
+		text-align: center
+		a
+			text-decoration: none
+			color: $white
+		&:first-child,
+		&:last-child
+			opacity: .85
+			&:hover
+				opacity: 1
+		&:first-child
+			text-align: right
+			span
+				text-transform: uppercase
+		&:nth-child(2)
+			text-transform: uppercase
+			margin: 0 75px
+			a
+				color: $darkest-red					
+				text-shadow: 3px 0px 0 $white,3px 1px 0 $white,3px 2px 0 $white,3px 3px 0 $white,2px 3px 0 $white,1px 3px 0 $white,0px 3px 0 $white,-3px 0px 0 $white,-3px 1px 0 $white,-3px 2px 0 $white,-3px 3px 0 $white,-2px 3px 0 $white,-1px 3px 0 $white,0px 3px 0 $white,3px 0px 0 $white,3px -1px 0 $white,3px -2px 0 $white,3px -3px 0 $white,2px -3px 0 $white,1px -3px 0 $white,0px -3px 0 $white,-3px 0px 0 $white,-3px -1px 0 $white,-3px -2px 0 $white,-3px -3px 0 $white,-2px -3px 0 $white,-1px -3px 0 $white,0px -3px 0 $white
+		&:last-child
+			text-align: left
+			&::first-letter
+				text-transform: uppercase
