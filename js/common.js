@@ -30,6 +30,7 @@ $(document).ready(function () {
 		$("#question-form-textarea").attr("rows", "10");
 		$("#answers-section").removeClass("scroll");
 		$("#statistic-section").removeClass("scroll");
+		$("#inputs-first").append("<div class='line-under-input'></div>");
 	};
 
 	$("form").on("submit", function(e) {
