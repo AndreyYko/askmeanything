@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>AmA | Question</title>
+	<link rel="stylesheet" href="css/libs.min.css">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+	<link rel="stylesheet" href="css/normalize.css">
+	<link rel="stylesheet" href="css/style.css">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+	<header>
+		<nav>
+			<section class="nav-mobile">
+				<div class="visible">
+					<span>statistic</span>
+					<div id="nav-button">
+						<span class="bar1"></span>
+						<span class="bar2"></span>
+						<span class="bar3"></span>
+					</div>
+				</div>
+				<ul class="nav-mobile-menu">
+					<li><a href="/">question</a></li>
+					<span></span>
+					<li><a href="/answers">answers</a></li>
+				</ul>
+			</section>
+			<ul class="nav-menu">
+				<li><a href="/">questio<span>n</span></a></li>
+				<li><a href="">statistic</a></li>
+				<li><a href="/answers">answers</a></li>
+			</ul>
+		</nav>
+	</header>
+	<main>
+		<section class="white-section statistic scroll" id="statistic-section">
+			<h2>Your statistics</h2>
+			<div class="info-h2">
+				<span>profile:&nbsp;</span>
+				<span>{{name}}</span>
+				<span class="icon"><img src="img/setting.png" alt=""></span>
+			</div>
+			<div class="section-with-statisctics">
+				<div class="statistic-block">
+					<img src="img/Question-Girl.png" alt="">
+					<p>questions</p>
+					<p class="count">{{questions}}</p>
+				</div>
+				<div class="statistic-block">
+					<img src="img/answ.png" alt="">
+					<p>answers</p>
+					<p class="count">{{answers}}</p>
+				</div>
+				<div class="statistic-block">
+					<img src="img/star.png" alt="">
+					<p>rating</p>
+					<p class="count">4.5</p>
+				</div>
+				<div class="statistic-block">
+					<span>+</span>
+					<img src="img/heart.png" alt="">
+					<p>earned</p>
+					<p class="count">{{earned}}</p>
+				</div>
+				<div class="statistic-block">
+					<span>-</span>
+					<img src="img/heart.png" alt="">
+					<p>spent</p>
+					<p class="count">{{spend}}</p>
+				</div>
+			</div>
+		</section>
+		<div class="pop-up-back" id="pop-up-div">
+			<section class="white-section pop-up">
+				<h2>New question&nbsp;<i class="fas fa-tasks"></i></h2>
+				<div class="message">
+					Lorem ipsum dolor sit amet, consectetur
+					adipiscing elit, sed do eiusmod tempor incididunt
+					ut labore et dolore magna aliqua. Ut enim ad
+					minim veniam, quis nostrud exercitation sed do
+					 eiusmod tempor incididunt quis nostrud sed elit
+					ut labore et dolore magna aliqua.... <span class="read-more">Read more</span>
+				</div>
+				<h3>Would you like to answer it?</h3>
+				<div class="buttons" id="pop-up-hight-buttons">
+					<button class="default-button default-button-1" id="pop-up-show-form">yes</button>
+					<button class="default-button default-button-2 pop-up-hide" id="">no</button>
+				</div>
+				<div class="pop-up-hidden">
+					<form class="default-form preventDefault">
+						<textarea name="" id="pop-up-form-textarea" rows="5" placeholder="Some answer..."></textarea>
+						<span class="line"></span>
+						<div class="buttons">
+							<input type="submit" value="send">
+							<button class="default-button default-button-2 pop-up-hide">cancel</button>
+						</div>
+					</form>
+				</div>
+			</section>
+		</div>
+		<section id="pop-up-new-answer">
+			<h1>New answer</h1>
+			<p id = "pop-up-question-q">Q:&nbsp;Some qu</p>
+			<p id = "pop-up-answer-q">A:&nbsp;Some answer</p>
+			<div class="buttons">
+				<a class="mini-button" href="/answers">Read more</a>
+				<a id="close-pop-up-new-answer">Close</a>
+			</div>
+		</section>
+	</main>
+	<script src="/socket.io/socket.io.js"></script>
+	<script src="js/libs.min.js"></script>
+	<script src="js/common.js"></script>
+	<script src ="js/socket_io.js"></script>
+</body>
+</html>
